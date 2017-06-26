@@ -1,0 +1,6 @@
+其中config.uri指定远程加载配置信息的地址，就是前面我们刚建立的配置管理服务器的地址，绑定端口8888，其中config.port:8888，表示如果在命令行提供了config.port参数，我们就用这个端口，否则就用8888端口。
+config.name表示配置文件名称，查看我们前面创建配置文件，是这个名称： config-dev.properties
+　　可以分成两部分: {application}- {profile}.properties
+　　所以我们配置config.name为cloud-config，config.profile为dev，其中dev表示开发配置文件，配置文件仓库里还有一个测试环境的配置文件，切换该配置文件只需要将dev改为test即可，当然这个参数也可以由启动时命令行传入，如：
+　　java -jar cloud-simple-service-1.0.0.jar --config.profile =test
+　　此时应用就会加载测试环境下的配置信息。
