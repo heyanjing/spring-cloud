@@ -1,0 +1,14 @@
+server:
+  port: 8085
+
+
+
+spring:
+  application:
+    name: balance
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+
+
