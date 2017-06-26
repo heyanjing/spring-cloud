@@ -1,0 +1,7 @@
+config-------配置文件
+configservice--------配置服务
+discovery-----------服务注册中心
+
+
+service1-----------服务1
+service2-----------服务2
