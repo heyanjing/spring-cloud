@@ -1,6 +1,7 @@
 config-------配置文件
 configservice--------配置服务
 discovery-----------服务注册中心
+balance-------------负载均衡（客户端）
 
 
 service1-----------服务1

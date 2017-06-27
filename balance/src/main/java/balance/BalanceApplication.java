@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+//@EnableEurekaClient
 public class BalanceApplication {
     @Bean
     @LoadBalanced
