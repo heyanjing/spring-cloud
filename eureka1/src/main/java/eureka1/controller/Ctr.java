@@ -2,7 +2,6 @@ package eureka1.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,13 +18,14 @@ public class Ctr {
     private static final Logger log = LoggerFactory.getLogger(Ctr.class);
 
 
-    @Value("${env}")
-    private String  env;
+    //@Value("${env}")
+    //private String  env;
 
     @RequestMapping("/")
     public String home() {
         log.warn("{}", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-        return "service1-------" +env;
+        //return "service1-------" +env;
+        return "service1-------" ;
     }
 
     @RequestMapping(value = "/add" ,method = RequestMethod.GET)

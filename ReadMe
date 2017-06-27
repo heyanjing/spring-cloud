@@ -6,3 +6,28 @@ ribbon-------------负载均衡（客户端）
 
 eureka1-----------服务1
 eureka2-----------服务2
+
+
+java -jar eureka-server-1.0-SNAPSHOT.jar --server.port=8081
+
+java -jar  config-service-1.0-SNAPSHOT.jar --server.port=8888
+
+java -jar feign-1.0-SNAPSHOT.jar --server.port=8086
+java -jar ribbon-1.0-SNAPSHOT.jar --server.port=8085
+
+java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8082
+java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8083
+
+java -jar  config-service-1.0-SNAPSHOT.jar --server.port=8888
+java -jar
+java -jar
+java -jar
+java -jar
+java -jar
+
+
+
+
+mvn clean install -Dmaven.test.skip=true
+
+

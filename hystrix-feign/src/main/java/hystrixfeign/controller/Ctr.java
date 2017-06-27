@@ -2,6 +2,7 @@ package hystrixfeign.controller;
 
 import hystrixfeign.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Ctr {
     @Autowired
+    @Qualifier("IServiceImpl")
     IService iService;
 
     @RequestMapping("/")
@@ -21,7 +23,7 @@ public class Ctr {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam(name = "a",defaultValue = "2") Integer a, @RequestParam(name = "b",defaultValue = "2") Integer b) {
+    public Integer add(@RequestParam(name = "a",defaultValue = "1") Integer a, @RequestParam(name = "b",defaultValue = "2") Integer b) {
         return this.iService.add(a, b);
     }
 

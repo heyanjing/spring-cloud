@@ -1,11 +1,11 @@
-package hystrixfeign.service.fallback;
+package hystrixfeign.service;
 
-import hystrixfeign.service.IService;
+import org.springframework.stereotype.Component;
 
 /**
- * Created by heyanjing on 2017/6/27 11:48.
+ * Created by heyanjing on 2017/6/27 17:52.
  */
-//@Repository
+@Component
 public class IServiceImpl implements IService {
     @Override
     public String home() {
