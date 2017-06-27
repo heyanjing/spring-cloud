@@ -1,6 +1,6 @@
 package hystrixfeign.controller;
 
-import feign.service.IService;
+import hystrixfeign.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,8 +21,8 @@ public class Ctr {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam(value = "a",defaultValue = "2") Integer a, @RequestParam(value = "b",defaultValue = "2") Integer b) {
-        return this.iService.add(1, 2);
+    public Integer add(@RequestParam(name = "a",defaultValue = "2") Integer a, @RequestParam(name = "b",defaultValue = "2") Integer b) {
+        return this.iService.add(a, b);
     }
 
 }

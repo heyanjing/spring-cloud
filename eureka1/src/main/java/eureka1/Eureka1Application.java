@@ -2,15 +2,15 @@ package eureka1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Created by heyanjing on 2017/6/24 15:52.
  */
 @SpringBootApplication
-@EnableEurekaClient
+//@EnableEurekaClient
 //@RestController
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class Eureka1Application {
 
     public static void main(String[] args) {
