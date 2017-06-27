@@ -1,8 +1,8 @@
 config-------配置文件
-configservice--------配置服务
-discovery-----------服务注册中心
-balance-------------负载均衡（客户端）
+config-service--------配置服务
+eureka-service-----------服务注册中心
+ribbon-------------负载均衡（客户端）
 
 
-service1-----------服务1
-service2-----------服务2
+eureka1-----------服务1
+eureka2-----------服务2
