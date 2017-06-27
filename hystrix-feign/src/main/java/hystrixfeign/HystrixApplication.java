@@ -1,20 +1,18 @@
-package eureka2;
+package hystrixfeign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
- * Created by heyanjing on 2017/6/24 15:52.
+ * Created by heyanjing on 2017/6/24 15:36.
  */
 @SpringBootApplication
 @EnableEurekaClient
-//@EnableDiscoveryClient
-public class Eureka2Application {
-
+@EnableFeignClients
+public class HystrixApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Eureka2Application.class, args);
-        //new SpringApplicationBuilder(Service1Application.class).web(true).run(args);
+        SpringApplication.run(HystrixApplication.class, args);
     }
-
 }

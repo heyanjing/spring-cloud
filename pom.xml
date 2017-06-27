@@ -16,6 +16,8 @@
         <module>ribbon</module>
         <module>config-service</module>
         <module>feign</module>
+        <module>hystrix-ribbon</module>
+        <module>hystrix-feign</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
