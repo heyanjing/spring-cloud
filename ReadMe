@@ -12,25 +12,29 @@ feign-------------本地webservice同样具有负载均衡功能
 hystrix-feign-------------feign的熔断
 hystrix-ribbon-------------ribbon的熔断
 
-
 eureka1-----------服务1
 eureka2-----------服务2
 
+zuul---------------网关路由
 
-java -jar eureka-server-1.0-SNAPSHOT.jar --server.port=8081
+
+
+java -jar eureka-server-1.0-SNAPSHOT.jar --server.port=8887
 
 java -jar  config-service-1.0-SNAPSHOT.jar --server.port=8888
 
-java -jar feign-1.0-SNAPSHOT.jar --server.port=8086
+java -jar zuul-1.0-SNAPSHOT.jar --server.port=8889
+
+java -jar feign-1.0-SNAPSHOT.jar --server.port=8087
 java -jar ribbon-1.0-SNAPSHOT.jar --server.port=8085
 
+java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8081
 java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8082
-java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8083
 
 java -jar eureka2-1.0-SNAPSHOT.jar --server.port=8083
+java -jar eureka2-1.0-SNAPSHOT.jar --server.port=8084
 
 
-java -jar
 java -jar
 java -jar
 java -jar
