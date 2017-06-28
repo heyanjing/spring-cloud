@@ -24,7 +24,7 @@ public class Ctr {
     }
 
     @RequestMapping(value = "/sub", method = RequestMethod.GET)
-    public Integer sub(@RequestParam Integer a, @RequestParam Integer b) {
+    public Integer sub(@RequestParam(name = "a",defaultValue = "1") Integer a, @RequestParam(name = "b",defaultValue = "2") Integer b) {
         Integer r = a - b;
         return r;
     }
