@@ -3,6 +3,9 @@
 
 配置服务和服务注册中心使用application配置文件  其他的都使用bootstrap配置文件
 
+消息总线没弄
+教程地址http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/
+
 
 config-------配置文件
 config-service--------配置服务
@@ -34,10 +37,10 @@ java -jar zuul-1.0-SNAPSHOT.jar --server.port=8890
 
 java -jar feign-1.0-SNAPSHOT.jar --server.port=8087
 java -jar ribbon-1.0-SNAPSHOT.jar --server.port=8085
-#集群服务一
+#集群服务1
 java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8081
 java -jar eureka1-1.0-SNAPSHOT.jar --server.port=8082
-#集群服务二
+#集群服务2
 java -jar eureka2-1.0-SNAPSHOT.jar --server.port=8083
 java -jar eureka2-1.0-SNAPSHOT.jar --server.port=8084
 
